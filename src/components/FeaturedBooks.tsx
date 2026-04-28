@@ -134,13 +134,22 @@ export default function FeaturedBooks() {
                 {book.desc}
               </p>
               
-              <a 
-                href={`https://api.whatsapp.com/send?phone=5575991512810&text=Tenho%20interesse%20em%20obter%20o%20livro:%20'${encodeURIComponent(book.title)}'`} 
-                className="btn-outline text-[10px] tracking-widest py-2 px-6 group"
+              <button 
+                onClick={() => {
+                  const phone = "5575991512810";
+                  const message = encodeURIComponent(`Tenho interesse em obter o livro: '${book.title}'`);
+                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                  const url = isMobile
+                    ? `whatsapp://send?phone=${phone}&text=${message}`
+                    : `https://wa.me/${phone}?text=${message}`;
+
+                  window.location.href = url;
+                }}
+                className="btn-outline text-[10px] tracking-widest py-2 px-6 group cursor-pointer"
               >
                 {book.linkText}
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </motion.div>
           ))}
         </div>

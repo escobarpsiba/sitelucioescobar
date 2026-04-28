@@ -3,8 +3,16 @@ import { motion } from 'motion/react';
 import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactWhatsApp() {
-  const whatsappNumber = "5575991512810";
-  const whatsappLink = "https://w.app/dzolzv";
+  const handleWhatsApp = () => {
+    const phone = "5575991512810";
+    const message = encodeURIComponent("Olá, gostaria de agendar uma sessão de psicanálise.");
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const url = isMobile
+      ? `whatsapp://send?phone=${phone}&text=${message}`
+      : `https://wa.me/${phone}?text=${message}`;
+
+    window.location.href = url;
+  };
 
   return (
     <section id="contato" className="bg-dark-bg py-32 border-t border-white/5">
@@ -39,12 +47,12 @@ export default function ContactWhatsApp() {
             <p className="text-sm text-gray-500 mb-8 font-light">
               Clique no botão abaixo para iniciar uma conversa confidencial, tirar suas dúvidas e encontrar o melhor horário para você.
             </p>
-            <a 
-              href={whatsappLink}
-              className="w-full btn-outline justify-center py-4 bg-gold text-black hover:bg-gold/90 hover:text-black border-none font-medium text-xs tracking-widest"
+            <button 
+              onClick={handleWhatsApp}
+              className="w-full btn-outline justify-center py-4 bg-gold text-black hover:bg-gold/90 hover:text-black border-none font-medium text-xs tracking-widest cursor-pointer"
             >
               AGENDAR SESSÃO PELO WHATSAPP
-            </a>
+            </button>
           </motion.div>
 
           <motion.div

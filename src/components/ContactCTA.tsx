@@ -3,6 +3,17 @@ import { motion } from 'motion/react';
 import { MessageSquare, ArrowRight } from 'lucide-react';
 
 export default function ContactCTA() {
+  const handleWhatsApp = () => {
+    const phone = "5575991512810";
+    const message = encodeURIComponent("Olá, gostaria de agendar uma sessão de psicanálise.");
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const url = isMobile
+      ? `whatsapp://send?phone=${phone}&text=${message}`
+      : `https://wa.me/${phone}?text=${message}`;
+
+    window.location.href = url;
+  };
+
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background with blurred desk/chair */}
@@ -39,13 +50,13 @@ export default function ContactCTA() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <a 
-              href="https://w.app/dzolzv" 
-              className="btn-outline py-4 px-10 bg-gold/10 border-gold/30 hover:bg-gold/20 group"
+            <button 
+              onClick={handleWhatsApp}
+              className="btn-outline py-4 px-10 bg-gold/10 border-gold/30 hover:bg-gold/20 group cursor-pointer"
             >
               AGENDAR CONVERSA NO WHATSAPP
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>
