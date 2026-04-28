@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ExternalLink, FileText } from 'lucide-react';
+import capaParadoxo from '../assets/capa-paradoxo.jpg';
+import capaClinica from '../assets/capa-clinica.jpg';
+import capaEntreMedoDesejo from '../assets/capa-entre-medo-desejo.jpg';
 
 const books = [
   {
     title: "O Paradoxo do Amor",
     subtitle: "Necessidade vs Capacidade",
     desc: "Uma investigação psicanalítica sobre o amor, suas contradições e os impasses entre a carência afetiva e a construção de vínculos maduros.",
-    image: "/src/assets/capa-paradoxo.jpg",
+    image: capaParadoxo,
     linkText: "COMPRAR AGORA"
   },
   {
     title: "A Clínica da Invenção",
     subtitle: "Casos de Sucesso no Tratamento Psicanalítico do Autismo no Brasil e no Mundo",
     desc: "Uma obra que apresenta a clínica psicanalítica do autismo a partir de casos reais, evidenciando a potência da invenção subjetiva frente aos impasses do diagnóstico contemporâneo.",
-    image: "/src/assets/capa-clinica.jpg",
+    image: capaClinica,
     linkText: "COMPRAR AGORA"
   },
   {
     title: "Entre o Desejo e o Medo",
     subtitle: "A ansiedade sob o olhar da psicanálise",
     desc: "Uma leitura acessível e profunda sobre a ansiedade, articulando Freud, Lacan e a clínica contemporânea.",
-    image: "/src/assets/capa-entre-medo-desejo.jpg",
+    image: capaEntreMedoDesejo,
     linkText: "COMPRAR AGORA"
   }
 ];
