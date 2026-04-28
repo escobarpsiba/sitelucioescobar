@@ -4,7 +4,7 @@ import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactWhatsApp() {
   const whatsappNumber = "5575991512810";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20conversa.`;
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ola,%20gostaria%20de%20agendar%20uma%20conversa.`;
 
   return (
     <section id="contato" className="bg-dark-bg py-32 border-t border-white/5">

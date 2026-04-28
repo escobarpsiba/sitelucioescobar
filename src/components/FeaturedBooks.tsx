@@ -135,7 +135,7 @@ export default function FeaturedBooks() {
               </p>
               
               <a 
-                href={`https://wa.me/5575991512810?text=Tenho%20interesse%20em%20obter%20o%20livro:%20'${encodeURIComponent(book.title)}'`} 
+                href={`https://api.whatsapp.com/send?phone=5575991512810&text=Tenho%20interesse%20em%20obter%20o%20livro:%20'${encodeURIComponent(book.title)}'`} 
                 className="btn-outline text-[10px] tracking-widest py-2 px-6 group"
               >
                 {book.linkText}
