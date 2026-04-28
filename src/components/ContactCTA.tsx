@@ -40,9 +40,7 @@ export default function ContactCTA() {
             viewport={{ once: true }}
           >
             <a 
-              href="https://api.whatsapp.com/send?phone=5575991512810&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20primeira%20conversa." 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://wa.me/5575991512810?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20primeira%20conversa." 
               className="btn-outline py-4 px-10 bg-gold/10 border-gold/30 hover:bg-gold/20 group"
             >
               AGENDAR CONVERSA NO WHATSAPP

@@ -4,7 +4,7 @@ import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactWhatsApp() {
   const whatsappNumber = "5575991512810";
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20conversa.`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20conversa.`;
 
   return (
     <section id="contato" className="bg-dark-bg py-32 border-t border-white/5">
@@ -23,7 +23,7 @@ export default function ContactWhatsApp() {
             Entre em contato diretamente pelo WhatsApp para agendar sua sessão, seja presencial em Ilhéus/BA ou terapia online para qualquer lugar do Brasil.
           </p>
         </motion.div>
-
+ 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,8 +41,6 @@ export default function ContactWhatsApp() {
             </p>
             <a 
               href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full btn-outline justify-center py-4 bg-gold text-black hover:bg-gold/90 hover:text-black border-none font-medium text-xs tracking-widest"
             >
               AGENDAR SESSÃO PELO WHATSAPP

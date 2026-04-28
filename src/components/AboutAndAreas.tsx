@@ -25,12 +25,12 @@ export default function AboutAndAreas() {
             <h3 className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8 flex items-center gap-4">
               <span className="w-8 h-[1px] bg-gold" /> SOBRE
             </h3>
-            
+
             <h2 className="text-3xl font-serif mb-8 text-white italic">Lúcio Escobar</h2>
 
             <div className="space-y-6 text-gray-400 font-light leading-relaxed text-justify">
               <p>
-                Lúcio Escobar é <strong>psicanalista clínico em Ilhéus, Bahia</strong>, além de professor, escritor e poeta. Sua atuação é focada em oferecer uma escuta ética para pacientes da região sul da Bahia (como Itabuna e Ilhéus) e de todo o Brasil através da <strong>terapia online</strong>. Atualmente é doutorando em Psicanálise pela Logos University International (EUA).
+                Lúcio Escobar é <strong>psicanalista clínico em Ilhéus, Bahia</strong>, além de professor, escritor e poeta. Sua atuação é focada em oferecer uma escuta ética para pacientes da região sul da Bahia (como Itabuna e Ilhéus) e de todo o Brasil através da <strong>terapia online</strong>. Atualemnte é doutor em Psicanálise pela Logos University International (EUA).
               </p>
               <p>
                 Sua trajetória acadêmica e clínica garante uma abordagem profunda e singular para quem busca ajuda. O consultório é um espaço seguro e sigiloso para tratar o <strong>vazio existencial, crises emocionais, conflitos familiares e dependência amorosa</strong>.
@@ -67,7 +67,7 @@ export default function AboutAndAreas() {
                 </div>
               ))}
             </div>
-            
+
             <p className="mt-12 text-xs text-gray-500 italic border-t border-white/5 pt-8">
               "Atua especialmente na interface entre clínica psicanalítica e questões contemporâneas, com ênfase na subjetividade e no sofrimento psíquico."
             </p>
