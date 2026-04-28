@@ -4,7 +4,7 @@ import { GraduationCap, Award } from 'lucide-react';
 
 const formations = [
   {
-    title: "Doutorado em andamento em Psicanálise",
+    title: "Doutorado em Psicanálise",
     institution: "Logos University International (EUA)"
   },
   {

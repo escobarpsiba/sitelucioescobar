@@ -115,7 +115,7 @@ export default function FeaturedBooks() {
                 <img 
                   src={book.image} 
                   alt={book.title} 
-                  className="w-full h-full object-cover rounded-r-lg rounded-l-[3px] grayscale group-hover:grayscale-0 transition-all duration-700" 
+                  className="w-full h-full object-cover rounded-r-lg rounded-l-[3px] md:grayscale md:group-hover:grayscale-0 transition-all duration-700" 
                 />
                 {/* Book spine fold effect */}
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-gradient-to-r from-black/60 to-transparent z-10 rounded-l-[3px]" />
