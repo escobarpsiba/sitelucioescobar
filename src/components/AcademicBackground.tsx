@@ -29,11 +29,11 @@ const formations = [
   },
   {
     title: "Graduação em Filosofia",
-    institution: "Logos University International (EUA)"
+    institution: "Logos University International (França)"
   },
   {
     title: "Graduação em Antropologia e Religião",
-    institution: "Logos University International (EUA)"
+    institution: "Logos University International (França)"
   },
   {
     title: "Graduação em Teologia",
