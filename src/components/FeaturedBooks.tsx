@@ -4,6 +4,7 @@ import { ArrowRight, ExternalLink, FileText } from 'lucide-react';
 import capaParadoxo from '../assets/capa-paradoxo.jpg';
 import capaClinica from '../assets/capa-clinica.jpg';
 import capaEntreMedoDesejo from '../assets/capa-entre-medo-desejo.jpg';
+import capaAutismoMaes from '../assets/capa-autismomaes.png';
 
 const books = [
   {
@@ -26,6 +27,14 @@ const books = [
     desc: "Uma leitura acessível e profunda sobre a ansiedade, articulando Freud, Lacan e a clínica contemporânea.",
     image: capaEntreMedoDesejo,
     linkText: "COMPRAR AGORA"
+  },
+  {
+    title: "Autismo: O que não contaram às famílias",
+    subtitle: "Um olhar psicanalítico sobre o autismo",
+    desc: "Uma obra que revela o que as famílias não ouvem sobre o autismo, abordando a subjetividade, a linguagem e a clínica psicanalítica para além dos protocolos e diagnósticos padronizados.",
+    image: capaAutismoMaes,
+    linkText: "COMPRAR AGORA",
+    link: "https://autismoebookmaes.vercel.app/"
   }
 ];
 
@@ -136,14 +145,18 @@ export default function FeaturedBooks() {
               
               <button 
                 onClick={() => {
-                  const phone = "5575991512810";
-                  const message = encodeURIComponent(`Tenho interesse em obter o livro: '${book.title}'`);
-                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                  const url = isMobile
-                    ? `whatsapp://send?phone=${phone}&text=${message}`
-                    : `https://wa.me/${phone}?text=${message}`;
+                  if (book.link) {
+                    window.open(book.link, '_blank');
+                  } else {
+                    const phone = "5575991512810";
+                    const message = encodeURIComponent(`Tenho interesse em obter o livro: '${book.title}'`);
+                    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                    const url = isMobile
+                      ? `whatsapp://send?phone=${phone}&text=${message}`
+                      : `https://wa.me/${phone}?text=${message}`;
 
-                  window.location.href = url;
+                    window.location.href = url;
+                  }
                 }}
                 className="btn-outline text-[10px] tracking-widest py-2 px-6 group cursor-pointer"
               >
